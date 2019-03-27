@@ -30,7 +30,7 @@ class OAuthService {
         map.add("redirect_uri", System.getenv("redirectUri"))
 
         try {
-            def request = new HttpEntity<MultiValueMap<String, String>>(map, StaticValues.CreateHttpHeaders(authorizationString));
+            def request = new HttpEntity<MultiValueMap<String, String>>(map, StaticValues.CreateHttpHeaders(authorizationString))
             log.debug("Token URL: " + System.getenv("tokenUrl"))
             return restTemplate.postForEntity(System.getenv("tokenUrl"), request, String).body
         }
