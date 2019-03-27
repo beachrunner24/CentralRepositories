@@ -1,0 +1,21 @@
+oauth:
+  clientId: ${OAUTH_CLIENT_ID:d534d089-5210-4d47-b150-7de2c8267658}
+  clientSecret: ${OAUTH_CLIENT_SECRET:90bf3fe4-0e6e-463a-988a-0b118765ef2c}
+  refreshToken: ${OAUTH_REFRESH_TOKEN:8ABlqhBeXSmJ9Ic0IPKXKcf8OruxAWMn4uh6gsYn4FlbtbPOkWx2ppECOLyl1mOh}
+  grantType: ${OAUTH_GRANT_TYPE:authorization_code}
+
+logging.level.com.logisticare: ${LOG_LEVEL:INFO}
+logging.level.root: ${ROOT_LOG_LEVEL:ERROR}
+
+---
+server:
+  servlet.context-path: ${SERVER_CONTEXT_PATH:/}
+  port: ${SERVER_PORT:8443}
+  ssl:
+    enabled: ${SSL_ENABLED:true}
+    key-store: ${SSL_KEYSTORE:}
+    key-store-password: ${SSL_KEYSTORE_PASSWORD:}
+    protocol: TLS
+
+spring:
+  profiles:  production
